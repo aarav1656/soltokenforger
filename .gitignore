@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+**/node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+**/dist/
+\.next/
+.next/
+
+# Env files
+.env
+.env.*
+
+# Logs
+logs/
+**/logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Prisma
+prisma/dev.db
