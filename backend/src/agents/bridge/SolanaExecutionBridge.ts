@@ -6,7 +6,7 @@
  */
 
 import { Connection, Keypair, PublicKey, Transaction } from '@solana/web3.js';
-import { SolanaAgentKit } from '@sendaifun/solana-agent-kit';
+import { SolanaAgentKit } from '../kit/SolanaAgentKit';
 import { logger } from '../../utils/logger';
 import { config } from '../../config';
 import { MeteoraService } from '../../services/meteora/MeteoraService';
@@ -109,7 +109,7 @@ export class SolanaExecutionBridge {
       }
     });
 
-    this.uagentWebSocket.on('error', (error) => {
+    this.uagentWebSocket.on('error', (error: Error) => {
       logger.error('❌ uAgent WebSocket error:', error);
     });
 

@@ -19,7 +19,7 @@ RUN pnpm install --frozen-lockfile
 FROM base AS build
 COPY --from=dependencies /app/node_modules ./node_modules
 COPY . .
-RUN pnpm build
+RUN pnpm generate && pnpm build
 
 # Production stage
 FROM node:20-alpine AS production

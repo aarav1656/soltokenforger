@@ -20,15 +20,13 @@
   "dependencies": {
     "@solana/web3.js": "^1.87.6",
     "@solana/spl-token": "^0.3.9",
-    "@meteora-ag/meteora-invent": "^1.0.0",
-    "@meteora-ag/dynamic-bonding-curve-sdk": "^1.0.0",
-    "@meteora-ag/vault-sdk": "^1.0.0",
-    "@sendaifun/solana-agent-kit": "latest",
     "express": "^4.18.2",
     "express-async-errors": "^3.1.1",
+    "express-rate-limit": "^7.4.0",
     "socket.io": "^4.6.1",
     "bullmq": "^5.1.0",
     "ioredis": "^5.3.2",
+    "ws": "^8.18.0",
     "@prisma/client": "^5.7.1",
     "prisma": "^5.7.1",
     "zod": "^3.22.4",
@@ -51,6 +49,8 @@
     "@types/jsonwebtoken": "^9.0.5",
     "@types/bcryptjs": "^2.4.6",
     "@types/jest": "^29.5.11",
+    "@types/ws": "^8.5.12",
+    "@types/bn.js": "^5.1.6",
     "typescript": "^5.3.3",
     "tsx": "^4.7.0",
     "tsc-alias": "^1.8.8",
@@ -63,5 +63,19 @@
   },
   "engines": {
     "node": ">=20.0.0"
+  },
+  "pnpm": {
+    "allowedBuiltDependencies": [
+      "@prisma/client",
+      "@prisma/engines",
+      "@tensorflow/tfjs-node",
+      "bigint-buffer",
+      "bufferutil",
+      "core-js",
+      "esbuild",
+      "msgpackr-extract",
+      "prisma",
+      "utf-8-validate"
+    ]
   }
 }
